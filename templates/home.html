@@ -1,7 +1,48 @@
-<h1>Message Board Homepage</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<ul>
-    {% for post in all_posts_list %}
-        <li>{{ post.text }}</li>
-    {% endfor %}
-</ul>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Message Board</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            padding-top: 2.5%;
+            color: #5E17EB;
+            font-size: 3rem;
+        }
+    
+        li {
+            list-style-type: none;
+            border-left: 2px solid #F7196A;
+            border-radius: 2%;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Message Board</h1>
+    
+        <ul class="row">
+            {% for post in all_posts_list %}
+                <li class="col-sm col-lg-4 my-2">{{ post.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
